@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}eventos-api{% endblock %}</title>
+    <style>
+        body { font-family: sans-serif; margin: 2rem; color: #222; }
+        header { border-bottom: 2px solid #333; padding-bottom: .5rem; margin-bottom: 1.5rem; }
+        footer { border-top: 1px solid #ccc; margin-top: 2rem; padding-top: .5rem; font-size: .85rem; color: #666; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: .5rem; text-align: left; }
+        th { background: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>eventos-api · Painel Interno</h1>
+        <nav><a href="/eventos/pagina/lista">Lista de eventos</a></nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        Uso interno — equipe de operações. &copy; eventos-api
+    </footer>
+</body>
+</html>

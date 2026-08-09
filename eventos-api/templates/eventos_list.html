@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de eventos · eventos-api{% endblock %}
+
+{% block content %}
+    <h2>Eventos cadastrados</h2>
+    {% if eventos %}
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Nome</th><th>Data</th><th>Organizador</th></tr>
+        </thead>
+        <tbody>
+            {% for evento in eventos %}
+            <tr>
+                <td>{{ evento.id }}</td>
+                <td><a href="/eventos/pagina/{{ evento.id }}">{{ evento.nome }}</a></td>
+                <td>{{ evento.data }}</td>
+                <td>{{ evento.organizador }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Nenhum evento cadastrado ainda.</p>
+    {% endif %}
+{% endblock %}

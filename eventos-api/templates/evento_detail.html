@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ evento.nome }} · eventos-api{% endblock %}
+
+{% block content %}
+    <h2>Detalhe do evento #{{ evento.id }}</h2>
+    <ul>
+        <li><strong>Nome:</strong> {{ evento.nome }}</li>
+        <li><strong>Data:</strong> {{ evento.data }}</li>
+        <li><strong>Organizador:</strong> {{ evento.organizador }}</li>
+    </ul>
+    <p><a href="/eventos/pagina/lista">&larr; Voltar para a lista</a></p>
+{% endblock %}
